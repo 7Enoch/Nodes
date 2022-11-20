@@ -1,17 +1,17 @@
 import java.util.Arrays;
 
-public class demo1 {
+public class greedy {
 
     public static void main(String[] args) {
-        System.out.println("海盗船:最多能装下" + pb() + "件");
+        System.out.println("海盗船:最多能装下" + pirateBoat() + "件");
         int arr[] = { 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1 };
         int n = 5;
         System.out.print("能不能种下" + n + "朵花：");
-        gf(arr, n);
+        growFlowers(arr, n);
 
     }
 
-    public static int pb() {
+    public static int pirateBoat() {
         // 海盗船问题
         /*
          * 有一个商船，上面有一些货物，
@@ -37,7 +37,7 @@ public class demo1 {
         return n;
     }
 
-    public static void gf(int arr[], int n) {
+    public static void growFlowers(int arr[], int n) {
         /*
          * 一个很长的花坛，一部分已经种植了花，另一部分却没有，
          * 花不能种植在相邻的地块上，否则两个都会死
@@ -73,4 +73,17 @@ public class demo1 {
             System.out.println("不能");
         }
     }
+
+    public static void planet() {
+        /*
+         * 给定一个整数数组，表示在同一行的行星
+         * 每一个元素，其绝对值表示行星的大小
+         * 正负表示移动方向，正往右移动，负往左移动
+         * 每一颗行星速度相同
+         * 碰撞规则：两个行星碰撞较小的行星会爆炸
+         * 如果大小相同两颗都会爆炸
+         * 两个移动方向相同的行星永远不会发生碰撞
+         */
+    }
+
 }
