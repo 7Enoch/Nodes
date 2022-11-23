@@ -1,6 +1,6 @@
 //整数转二进制32位输出
 
-public class demo1 {
+public class Base {
     static int num = 1;
     int i;
 
