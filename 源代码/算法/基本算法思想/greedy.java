@@ -1,5 +1,6 @@
 import java.util.Arrays;
 
+//Ì°ÐÄ
 public class greedy {
 
     public static void main(String[] args) {

@@ -1,5 +1,5 @@
 //≤Â»Î≈≈–Ú
-public class demo4 {
+public class insetSort {
 
     public static void insetSort1(int[] arr) {
         // Œ¥”≈ªØ

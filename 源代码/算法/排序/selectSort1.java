@@ -1,6 +1,6 @@
 // —°‘Ò≈≈–Ú
 
-public class demo3 {
+public class selectSort1 {
 
     public static void selectSort(int[] arr) {
         if (arr == null || arr.length < 2) {

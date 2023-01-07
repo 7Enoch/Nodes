@@ -1,0 +1,57 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch mergeSort",
+            "request": "launch",
+            "mainClass": "mergeSort",
+            "projectName": "源代码_1e019316"
+        },
+        {
+            "type": "java",
+            "name": "Launch bit_operation",
+            "request": "launch",
+            "mainClass": "bit_operation",
+            "projectName": "源代码_1e019316"
+        },
+        {
+            "type": "java",
+            "name": "Launch bitMap",
+            "request": "launch",
+            "mainClass": "bitMap",
+            "projectName": "源代码_1e019316"
+        },
+        {
+            "type": "java",
+            "name": "Launch EOR",
+            "request": "launch",
+            "mainClass": "EOR",
+            "projectName": "源代码_1e019316"
+        },
+        {
+            "type": "java",
+            "name": "Launch Linklist",
+            "request": "launch",
+            "mainClass": "Linklist",
+            "projectName": "源代码_1e019316"
+        },
+        {
+            "type": "java",
+            "name": "Launch SingleLinkedlistDemo",
+            "request": "launch",
+            "mainClass": "Linkedlist.SingleLinkedlistDemo",
+            "projectName": "源代码_1e019316"
+        },
+        {
+            "type": "java",
+            "name": "Launch DataStructureJob",
+            "request": "launch",
+            "mainClass": "DataStructureJob",
+            "projectName": "源代码_1e019316"
+        }
+    ]
+}
