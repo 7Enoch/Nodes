@@ -17,7 +17,7 @@ class SingleLinkedlist {
     // 菜单函数
     static void Menu() {
         System.out.println("          线性表的操作");
-        System.out.println("   软件一班 蔡佳霖 216230119");
+        System.out.println("         xxxxxxxxxxxxxx    ");
         System.out.println("|============================|");
         System.out.println("|      (1)-初始化            |");
         System.out.println("|      (2)-建立线性表        |");

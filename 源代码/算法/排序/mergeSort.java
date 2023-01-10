@@ -1,74 +1,27 @@
 //归并排序
 public class mergeSort {
     public static void main(String[] args) {
-
+        ArrayUtil utilM = new ArrayUtil();
         int maxsize = 100;
-        int maxvalue = 1000;
-        int timetest = 10;
+        int maxvalue = 100;
+        int timetest = 10000;
         System.out.println("测试开始");
         for (int i = 0; i < timetest; i++) {
 
-            int[] arr1 = generteRandomArray(maxsize, maxvalue);
-            int[] arr2 = copyArray(arr1);
+            int[] arr1 = utilM.generteRandomArray(maxsize, maxvalue);
+            int[] arr2 = utilM.copyArray(arr1);
 
             mergeSort1(arr1);
             mergeSort2(arr2);
-            if (!isEqual(arr1, arr2)) {
+            if (!utilM.isEqual(arr1, arr2)) {
                 System.out.println("出错了");
-                printArray(arr1);
-                printArray(arr2);
+                utilM.printArray(arr1);
+                utilM.printArray(arr2);
                 break;
             }
 
         }
         System.out.println("测试结束");
-    }
-
-    public static int[] copyArray(int[] arr) {
-        if (arr == null) {
-            return null;
-        }
-        int help[] = new int[arr.length];
-        for (int i = 0; i < arr.length; i++) {
-            help[i] = arr[i];
-        }
-        return help;
-    }
-
-    public static void printArray(int[] arr) {
-        if (arr == null) {
-            return;
-        }
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i] + " ");
-        }
-    }
-
-    public static boolean isEqual(int[] a, int[] b) {
-        if (a == null && b == null) {
-            return true;
-        }
-        if (a.length != b.length) {
-            return false;
-        }
-        if ((a == null && b != null) || (a != null && b == null)) {
-            return false;
-        }
-        for (int i = 0; i < a.length; i++) {
-            if (a[i] != b[i]) {
-                return false;
-            }
-
-        }
-        return true;
-    }
-
-    public static int[] generteRandomArray(int maxSize, int maxValue) {
-        int[] arr = new int[(int) (Math.random() * (maxSize + 1))];
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = (int) ((maxValue * (Math.random())) - (maxValue * (Math.random())));
-        }
-        return arr;
     }
 
     // 递归实现
@@ -121,30 +74,31 @@ public class mergeSort {
         int N = arr.length;
         while (step < N) {// 防止步长越界
             int L = 0;
-            int M = 0;
-            while (L < N) {
 
+            while (L < N) {
+                int M = 0;
                 if (N - L >= step) {// L到N-1能凑齐一个步长
                     M = L + step - 1;
                 } else {
                     M = N - 1;
                 } // 获取中点数
-            }
-            if (M == N - 1) {// 没凑够左组，没有右组，直接退出
-                break;
-            }
-            int R = 0;
-            // 右组最后一个数
-            if (N - 1 - M >= step) {
-                R = M + step;
-            } else {
-                R = N - 1;
-            }
-            merge(arr, L, M, R);
-            if (R == N - 1) {
-                break;
-            } else {
-                L = R + 1;// 指向下一个左组开头
+
+                if (M == N - 1) {// 没凑够左组，没有右组，直接退出
+                    break;
+                }
+                int R = 0;
+                // 右组最后一个数
+                if (N - 1 - M >= step) {
+                    R = M + step;
+                } else {
+                    R = N - 1;
+                }
+                merge(arr, L, M, R);
+                if (R == N - 1) {
+                    break;
+                } else {
+                    L = R + 1;// 指向下一个左组开头
+                }
             }
             if (step > (N / 2)) {// 对step改变操作，防止溢出
                 break;
